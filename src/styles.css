@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+/* 
+E7F59E - AMARELO -cor boa para colocar no background
+0C1618 - PRETO
+E2AEDD - ROSA -cor boa para colocar no background
+FC7753 - LARANJA -cor para detalhes
+73D2DE - CIANO -cor boa para colocar no background
+00C2CB - OUTRO CIANO
+ */
+html, body { 
+    height: 100%;
+    background-image: url('./assets/img/backgroundKoalaEducation-removebg-preview.png');
+    background-size: 15%;
+    background: #E7F59E;
+    backface-visibility: 50%;
+ }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* 
+
+::-webkit-scrollbar{
+   color: #73D2DE;
+   background-color: #E2AEDD;
+}
+
+::-webkit-scrollbar-track-piece{
+    background-color: #73D2DE;
+   
+}  */

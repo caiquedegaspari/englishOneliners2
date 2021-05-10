@@ -1,0 +1,26 @@
+/* 
+E7F59E - AMARELO
+0C1618 - PRETO
+E2AEDD - ROSA
+FC7753 - LARANJA
+73D2DE - CIANO
+00C2CB - OUTRO CIANO
+ */
+
+ nav{
+     background-color: #73D2DE;
+     height: 9vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     cursor: default;
+ }
+ .title_container {
+     height: 100%;
+ }
+ h1{
+     color: #ffffff;
+     font-family: 'Bree Serif';
+     font-size: 5vh;
+     line-height: 8vh;
+ }

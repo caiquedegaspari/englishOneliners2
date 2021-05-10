@@ -1,0 +1,69 @@
+<div class="container">
+    <button class="back_button" mat-raised-button routerLink="/">VOLTAR</button>
+    <div class="card">
+        <div class="card_content_container">
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <div class="title_container">
+                    <h1>CADASTRAR</h1>
+                </div>
+
+                <div class="input_container">
+                    <input 
+                    [ngClass]="input_classes"
+                    formControlName="name" 
+                    #email type="text" 
+                    placeholder="DIGITE SEU NOME"
+                    >
+
+                    <div *ngIf="hasError" class="mat-error_container">
+                        <mat-error *ngIf="registerForm.controls.name.hasError('required')">
+                            <span>Insira um nome</span>
+                        </mat-error>
+                        <mat-error *ngIf="registerForm.controls.name.hasError('minlength')">
+                            <span>3 caracteres no mínimo</span>
+                        </mat-error>
+                    </div>
+                </div>
+
+                <div class="input_container">
+                    <input 
+                    [ngClass]="input_classes"
+                    formControlName="email" 
+                    #email type="email" 
+                    placeholder="DIGITE SEU E-MAIL"
+                    >
+
+                    <div *ngIf="hasError" class="mat-error_container">
+                        <mat-error *ngIf="registerForm.controls.email.hasError('required')">
+                            <span>Insira um email</span>
+                        </mat-error>
+                        <mat-error *ngIf="registerForm.controls.email.hasError('email')">
+                            <span>Email inválido</span>
+                        </mat-error>
+                    </div>
+                </div>
+                <div class="input_container">
+                    <input 
+                    [ngClass]="input_classes" 
+                    class="ng-invalid" 
+                    formControlName="password" 
+                    #password type="password" 
+                    placeholder="DIGITE SUA SENHA"
+                    >
+
+                    <div *ngIf="hasError"class="mat-error_container">
+
+                    <mat-error *ngIf="registerForm.controls.password.hasError('required')">
+                        <span>Insira uma senha</span>
+                    </mat-error>
+                    <mat-error *ngIf="registerForm.controls.password.hasError('minlength')">
+                        <span>minimo 6 caracteres</span>
+                    </mat-error>
+                    </div>
+                    <span><a routerLink="/login">Já possuo conta</a></span>
+                </div>
+                <button (click)="verifyInputs()" type="submit" mat-raised-button>CADASTRAR</button>
+            </form>
+        </div>
+    </div>
+</div>
